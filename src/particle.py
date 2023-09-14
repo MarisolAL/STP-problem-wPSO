@@ -24,6 +24,7 @@ class Particle:
 
     def __init__(self, initial_position, fitness_function):
         """
+        Particle class constructor
         Parameters
         ----------
         initial_position: list
