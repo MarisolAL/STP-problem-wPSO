@@ -21,7 +21,7 @@ class Swarm:
         Swarm class constructor
         Parameters
         ----------
-        population_size: Int
+        population_size: int
             Number of particles in the swarm
         initial_position: list
             Initial position where the particles will be initialized
@@ -48,7 +48,7 @@ class Swarm:
             Lower limit of the search space
         upper_limit: list
             Upper limit of the search space
-        max_iterations: Int
+        max_iterations: int
             Maximum number of iterations the algorithm will do
         Returns
         -------
