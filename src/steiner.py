@@ -31,6 +31,18 @@ class Steiner:
         self.tree = None
         self.weight = None
 
+    def set_steiner(self, points):
+        """
+        Steiner class setter
+        Parameters
+        ----------
+        points: list
+            Points that will be set to the tree
+        """
+        self.points = points
+        self.tree = None
+        self.weight = None
+
     def delete_steiner(self):
         """
         Function that deletes the object data
@@ -171,4 +183,3 @@ class Steiner:
             actual_swarm += 1
         print("Final weight ", self.weight, " with the points ", self.points)
         return [self.points, self.weight, new_steiner_points]
-    
