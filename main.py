@@ -115,7 +115,7 @@ def execute_pso_from_file(file_name):
 
 if __name__ == '__main__':
     # filename = input()
-    file = open('../Examples/decroos-example.json')
+    file = open('Examples/decroos-example.json')
     data = json.load(file)
     # execute_pso_and_graph(30, 10, 15, [(-4, 0), (0, 6), (4, 0)])
     max_iteration = data['max_iteration']
@@ -138,7 +138,7 @@ if __name__ == '__main__':
     # obt_tree = "Obtained tree"
     # or_tree = "Original tree"
     # original_points_with_steiner_points_graph(original_points, steiner_points, obt_tree)    # For plotting
-    execute_pso_from_file("../Examples/example-1.json")
+    execute_pso_from_file("Examples/example-1.json")
     # s = steiner.Steiner(steiner_points + data["found_points"])
     # s.calculate_minimum_euclidean_tree()
     # s.calculate_total_tree_weight()
