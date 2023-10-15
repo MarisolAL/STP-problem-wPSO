@@ -133,6 +133,6 @@ class Particle:
             Position vector of the particle with the best fitness in the swarm
         """
         self.check_reset()
-        self.update_fitness()
         self.update_speed(best_global_position)
         self.update_position(upper_limit, lower_limit)
+        self.update_fitness()

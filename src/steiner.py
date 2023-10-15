@@ -53,15 +53,14 @@ class Steiner:
 
     def calculate_minimum_euclidean_tree(self):
         """
-        Function that calculates the euclidean minimum spanning tree of the points set.
+        Function that calculates the Euclidean minimum spanning tree of the points set.
         """
         graph = nx.Graph()
         for point_i in self.points:
             graph.add_node(tuple(point_i))
         for point_i in self.points:
             for point_j in self.points:
-                if (not point_i == point_j) \
-                        and (not graph.has_edge(tuple(point_i), tuple(point_j))):
+                if (not point_i == point_j) and (not graph.has_edge(tuple(point_i), tuple(point_j))):
                     weight = distance_between_two_points(point_i, point_j)
                     graph.add_edge(tuple(point_i), tuple(point_j), weight=weight)
         tree = nx.minimum_spanning_tree(graph)
@@ -74,11 +73,12 @@ class Steiner:
         """
         Function that calculates the total weight of the tree and sets it to `weight` attribute.
         """
-        self.weight = calculate_total_graph_weight(self.tree)
+        total_weight = calculate_total_graph_weight(self.tree)
+        self.weight = total_weight
 
     def calculate_tree_with_point(self, point):
         """
-        Function that given a point, calculates the euclidean minimum spanning tree of the initial point
+        Function that given a point, calculates the Euclidean minimum spanning tree of the initial point
         set and the given point
         Parameters
         ----------

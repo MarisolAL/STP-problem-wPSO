@@ -45,9 +45,10 @@ class SteinerTest(unittest.TestCase):
         s = steiner.Steiner([(-4, 0), (0, 6), (4, 0)])
         s.calculate_minimum_euclidean_tree()
         s.calculate_total_tree_weight()
+        original_w = s.weight
         steiner_points = s.steiner_particle_optimization(30, 10, 15)
         self.assertGreaterEqual(len(steiner_points[0]), len(s.points))
-        self.assertLessEqual(steiner_points[1], s.weight)
+        self.assertLessEqual(steiner_points[1], original_w)
 
 
 if __name__ == '__main__':
